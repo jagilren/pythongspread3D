@@ -3,7 +3,14 @@ import gspread
 import randomtime,queryTable, BoundaryHours, updateTable
 from decimal import Decimal
 
-gc = gspread.service_account()
+try:
+    gc = gspread.service_account()
+except:
+    print("No se pudo conetar a service google account")
+else:
+    pass
+finally:
+    pass
 current_datetime= datetime.now()
 #formatted_datetime = current_datetime.strftime('%Y-%m-%d %H:%M:%S')
 serial_number = []
